@@ -1,1 +1,5 @@
-ss
+/## Kontakt
+
+Autor: Igor Gwiazdowski
+
+...

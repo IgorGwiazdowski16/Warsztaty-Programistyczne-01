@@ -1,48 +1,71 @@
-﻿using System.IO.Compression;
+﻿string imie = "Miruna";
+char symbol = '@';
+int poziom = 3;
+int zloto = 40;
+double waga = 8;
+bool maMape = false;
 
-Console.WriteLine("Hello, World!");
-Console.WriteLine ("Nazywam się Igor");
-Console.WriteLine("Studiuje w PJATK");
-int a = 6;
-float b = 6.5f;
-double c = 3.3d;
-string d = "artur";
-char e = 'a';
-string imie = "Igor";
-int wiek = 22;
-string miasto = "Gdańsk";
+Console.WriteLine("===EKWIPUNEK===");
+Console.WriteLine($"Imie: {imie}");
+Console.WriteLine($"Symbol: {symbol}");
+Console.WriteLine($"Poziom: {poziom}");
+Console.WriteLine($"Złoto: {zloto}");
+Console.WriteLine($"Waga: {waga}");
+Console.WriteLine($"Ma mape: {maMape}");
 
-Console.WriteLine("Podaj swoje imię: ");
-Console.WriteLine($"Imię: -{d}-");
-Console.WriteLine("Jaki jest twój ulubiony kolor: ");
-string x = Console.ReadLine();
-Console.WriteLine($"Kolor: -{x}-");
-Console.WriteLine("podaj wiek ");
-string wiekString = Console.ReadLine()!;
-int wiekInt = int.Parse(wiekString);
-Console.WriteLine("Twój wiek za pięć lat: "+(wiekInt+5));
-Console.WriteLine("Twój wiek: "+wiekInt);
-Console.Write("Ile kilometrów łącznie ");
-int length = int.Parse(Console.ReadLine()!);
-Console.Write("Ile kilometrów dziennie: ");
-int speed = int.Parse(Console.ReadLine()!);
-Console.WriteLine($"Podróż będzie trwać:{length/speed}dni");
-Console.WriteLine("Podaj liczbę złotych monet: ");
-int goldCoins = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Podaj liczbę srebrnych monet: ");
-int silverCoins = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Podaj liczbę miedzianych monet: ");
-int copperCoins = int.Parse(Console.ReadLine()!);
-Console.WriteLine($"Posiadasz {goldCoins * 100 + silverCoins * 10 + copperCoins} miedzianych monet.");
-Console.WriteLine("Ile mikstur chcesz stworzyć: ");
+int punktyDoswiadczenia = 100;
+int liczbaZlota = 50;
+int poziomTreningowy = 1;
+
+Console.WriteLine($"Punkty doświadczenia: {punktyDoswiadczenia + 25}");
+Console.WriteLine($"Podwojone punky doświadczenia: {(punktyDoswiadczenia + 25) * 2}");
+Console.WriteLine($"Liczba złota po wejściu na arenę: {liczbaZlota - 8}");
+Console.WriteLine($"Złoto po nagrodzie: {liczbaZlota - 8 + 15}");
+Console.WriteLine($"Numer treningu: {poziomTreningowy + 1}");
+
+Console.Write("Liczba racji żywnościowych: ");
+int iloscRacji = int.Parse(Console.ReadLine()!);
+Console.Write("Liczba członków drużyny: ");
+int liczbaCzlonkow = int.Parse(Console.ReadLine()!);
+Console.Write("Liczba dni wyprawy: ");
+int dniWyprawy = int.Parse(Console.ReadLine()!);
+Console.WriteLine($"Każdy członek otrzyma {iloscRacji / liczbaCzlonkow} racji żywnościowych.");
+Console.WriteLine($"Po równym podziale zostanie {iloscRacji % liczbaCzlonkow} racji.");
+Console.WriteLine($"Dziennie przypadną {iloscRacji / dniWyprawy} racje na całą drużynę.");
+Console.WriteLine($"Dziennie średnio przypadnie {(iloscRacji / dniWyprawy) / liczbaCzlonkow} racji na jedną osobę.");
+
+
+Console.Write("Punkty życia: ");
+int zycie = int.Parse(Console.ReadLine()!);
+Console.Write("Liczba mikstur: ");
 int mikstury = int.Parse(Console.ReadLine()!);
-Console.WriteLine($"Potrzebujesz: {mikstury * 3} kryształów i {mikstury * 2} ziół");
-Console.WriteLine("Podaj liczbę monet: ");
-int monety = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Podaj liczbę bohaterów: ");
-int bohaterowie = int.Parse(Console.ReadLine()!);
-Console.WriteLine($"Każdy dostanie {monety/bohaterowie} monet. ");
-Console.WriteLine($"Po równym podziale zostanie {monety % bohaterowie} monet." );
+Console.Write("Ma mapę: ");
+bool haveMap = bool.Parse(Console.ReadLine()!);
+bool maKlucz = false;
+Console.Write("Ma klucz: ");
+bool haveKlucz = bool.Parse(Console.ReadLine()!);
+bool zyje = zycie > 0;
+bool maPelneZdrowie = zycie == 100;
+bool maZaopatrzenie = mikstury > 0;
+bool maPrzedmiotNawigacyjny = maMape && maKlucz;
+bool gotowyDoWyprawy = zyje && maZaopatrzenie && maMape && maKlucz;
+Console.WriteLine($"Żyje: {zycie > 0}");
+Console.WriteLine($"Ma pełne zdrowie: {zycie = 100}");
+Console.WriteLine($"Wymaga leczenia:  {zycie = 100}");
+Console.WriteLine($"Ma zaopatrzenie: {mikstury > 1}");
+Console.WriteLine($"Ma klucz lub mapę: {}");
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
