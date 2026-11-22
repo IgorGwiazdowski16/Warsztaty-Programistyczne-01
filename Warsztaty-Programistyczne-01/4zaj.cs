@@ -111,10 +111,6 @@ switch (wybor)
             }
             break;
 
-            case "3":
-
-
-
 }
 
 
