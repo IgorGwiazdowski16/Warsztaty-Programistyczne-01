@@ -26,3 +26,6 @@ jobs:
       - name: Build project
         shell: bash
         run: dotnet build "$PROJECT_PATH" --configuration Release --no-restore
+      - name: Run project
+        shell: bash
+        run: dotnet run --project "$PROJECT_PATH" --configuration Release --no-build
