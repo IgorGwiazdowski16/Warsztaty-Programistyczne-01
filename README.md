@@ -1,4 +1,5 @@
-\## Kontakt
+/## Kontakt
 
-Marcelo
+Autor: Igor Gwiazdowski
 
+...
