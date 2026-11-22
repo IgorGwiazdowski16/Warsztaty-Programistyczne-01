@@ -95,6 +95,26 @@ switch (wybor)
             Console.WriteLine($"Przeszukano loch! Tracisz 8 punktów życia, ale znajdujesz {zdobyteZloto} sztuk złota.");
             zuzytoTure = true;
             break;
+
+            case "2":
+            if (plecak.Count == 0)
+            {
+                Console.WriteLine("Plecak jest pusty.");
+            }
+            else
+            {
+                Console.WriteLine("--- Zawartość plecaka ---");
+                for (int i = 0; i < plecak.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}. {plecak[i]}");
+                }
+            }
+            break;
+
+            case "3":
+
+
+
 }
 
 
